@@ -1,0 +1,12 @@
+{
+  "dataset": "kitti",
+  "model_size": "small",
+  "selection": {
+    "all": true
+  },
+  "collect_profile": true,
+  "warmup_frames": 10,
+  "resume": true,
+  "ground_truth_cache": "runs/ground_truth_cache",
+  "output": "runs/evaluations/rx9070xt/kitti_small_full_rx9070xt_v2"
+}

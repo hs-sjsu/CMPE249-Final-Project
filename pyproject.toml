@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "depthlab"
+version = "0.2.0"
+requires-python = ">=3.11"
+description = "ROS 2 metric-depth experiments on KITTI and VKITTI2"
+
+[project.scripts]
+depthlab = "depthlab.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["depthlab*"]

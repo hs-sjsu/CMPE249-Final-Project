@@ -1,0 +1,89 @@
+# Depthlab publication allowlist.
+# New root-level files/folders need an explicit inclusion below.
+
+# Ignore root contents, then include the maintained project.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/LICENSE.*
+!/CITATION.cff
+!/.gitattributes
+!/.github/
+!/.envrc
+!/flake.nix
+!/flake.lock
+!/pyproject.toml
+!/depthlab/
+!/docs/
+!/results/
+
+# Current experiment configurations only.
+!/experiments/
+/experiments/*
+!/experiments/depthlab/
+/experiments/depthlab/*
+!/experiments/depthlab/v2/
+
+# Optional launcher for the current node.
+!/launch/
+/launch/*
+!/launch/depthlab.launch.py
+
+# Local migration files are unnecessary for new users.
+/depthlab/_migration_sources.json
+/experiments/depthlab/v2/migration_smoke.json
+
+# Old starter contract; remove this rule after updating it.
+/docs/ROS2_CONTRACT.md
+
+# Generated Python/environment/build files.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+*.egg-info/
+.venv/
+venv/
+.direnv/
+build/
+dist/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local secrets and private keys.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Raw tensors, weights, downloads, recordings, and logs.
+*.npy
+*.npz
+*.pt
+*.pth
+*.safetensors
+*.onnx
+*.part
+*.bag
+*.db3
+*.db3-shm
+*.db3-wal
+*.mcap
+*.zip
+*.tar
+*.tar.gz
+*.log
+
+# Editor and operating-system artifacts.
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
